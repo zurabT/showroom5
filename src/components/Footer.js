@@ -50,9 +50,9 @@ function Footer() {
       <div className="footer-info">
         <h3>Contact Us</h3>
         <ul className="footer-list">
-          <li className="footer-item">exampe@mail.com</li>
-          <li className="footer-item">Phone: 1111111</li>
-          <li className="footer-item">address: address</li>
+          <li className="footer-item">Mail: gg.expo@yahoo.com</li>
+          <li className="footer-item">Phone: +40733871580</li>
+          {/* <li className="footer-item">address: address</li> */}
         </ul>
       </div>
     </div>

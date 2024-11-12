@@ -53,7 +53,7 @@ function Slideshow() {
     <div className="slider-container">
       <div className="slider-container-link">
         {/* <a href="#">Go to gallery</a> */}
-        <Link to="/gallery"> Go to gallery</Link>
+        <Link to="/gallery">Our projects</Link>
       </div>
 
       <Slider {...settings}>

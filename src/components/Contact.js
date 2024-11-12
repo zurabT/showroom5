@@ -18,26 +18,26 @@ function Contact() {
         <h3>Contact Us</h3>
         <ul className="contact-list">
           <li className="contact-item">
-            <FontAwesomeIcon className="contact-icon" icon={faMailBulk} />{" "}
-            exampe@mail.com
+            <FontAwesomeIcon className="contact-icon" icon={faMailBulk} /> Mail:
+            gg.expo@yahoo.com
           </li>
           <li className="contact-item">
             <FontAwesomeIcon className="contact-icon" icon={faPhone} /> Phone:
-            12345678{" "}
-            <a href="https://wa.me/995598776012" target="_blank">
+            +40 733871580{" "}
+            <a href="https://wa.me/40733871580" target="_blank">
               <FontAwesomeIcon
                 className="whatsapp-icon"
-                icon={faSquareWhatsapp}
+                icon={faWhatsapp}
                 beat
                 size="xl"
-                style={{ color: "#0d5f02" }}
+                style={{ color: "#029267" }}
               />
             </a>
           </li>
-          <li className="contact-item">
+          {/* <li className="contact-item">
             <FontAwesomeIcon className="contact-icon" icon={faLocationArrow} />{" "}
             address: address
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

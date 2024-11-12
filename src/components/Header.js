@@ -18,10 +18,14 @@ function header() {
             ensures each piece is highlighted to its full potential, creating an
             immersive experience for customers.
           </p>
-          <div className="header-link">
-            {/* <a href="#">Contact </a> */}
-            <Link to="/contact"> Contact</Link>
-          </div>
+
+          <Link
+            to="/contact"
+            style={{ textDecoration: "none", color: "white" }}
+            className="header-link"
+          >
+            <div className="header-linka">Contact</div>
+          </Link>
         </div>
         <div className="header-img">
           <img src={himg} height="350" />
