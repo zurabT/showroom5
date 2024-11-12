@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/showroom4/static/css/main.75960d2a.css",
+    "main.js": "/showroom4/static/js/main.fbfad8f9.js",
+    "static/media/IMG-01.jpg": "/showroom4/static/media/IMG-01.c6a27f249f25d14f9fb4.jpg",
+    "static/media/IMG-09.jpg": "/showroom4/static/media/IMG-09.d4cf023cfbb57ba1fb19.jpg",
+    "static/media/IMG-10.jpg": "/showroom4/static/media/IMG-10.5d71634a9b49321fd991.jpg",
+    "static/media/IMG-5.jpg": "/showroom4/static/media/IMG-5.5d71634a9b49321fd991.jpg",
+    "static/media/IMG-07.jpg": "/showroom4/static/media/IMG-07.2e7354573d601e07b09e.jpg",
+    "static/media/IMG-4.jpg": "/showroom4/static/media/IMG-4.2e7354573d601e07b09e.jpg",
+    "static/media/IMG-08.jpg": "/showroom4/static/media/IMG-08.32212faea3de86c86680.jpg",
+    "static/media/IMG-03.jpg": "/showroom4/static/media/IMG-03.3248ff088c586ff77342.jpg",
+    "static/media/Mask Group.jpg": "/showroom4/static/media/Mask Group.11655e39cf272cdb3a64.jpg",
+    "static/media/IMG-2.jpg": "/showroom4/static/media/IMG-2.4e71c6ea73907361515b.jpg",
+    "static/media/IMG-02.jpg": "/showroom4/static/media/IMG-02.ffecb16709f5ebe72ad3.jpg",
+    "static/media/IMG-05.jpg": "/showroom4/static/media/IMG-05.299df37b4c7adb7ae1ea.jpg",
+    "static/media/IMG-3.jpg": "/showroom4/static/media/IMG-3.299df37b4c7adb7ae1ea.jpg",
+    "static/media/IMG-1.jpg": "/showroom4/static/media/IMG-1.6ccde3ed5ebcac4b9662.jpg",
+    "static/media/IMG-04.jpg": "/showroom4/static/media/IMG-04.ab730d9741060d5877a4.jpg",
+    "static/media/IMG-06.jpg": "/showroom4/static/media/IMG-06.9288de8fb39c53e2519f.jpg",
+    "static/media/IMG-LOGO.jpg": "/showroom4/static/media/IMG-LOGO.57a5f178a10f9639df8f.jpg",
+    "static/media/slick.svg": "/showroom4/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/showroom4/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/showroom4/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/showroom4/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/showroom4/index.html",
+    "main.75960d2a.css.map": "/showroom4/static/css/main.75960d2a.css.map",
+    "main.fbfad8f9.js.map": "/showroom4/static/js/main.fbfad8f9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75960d2a.css",
+    "static/js/main.fbfad8f9.js"
+  ]
+}
