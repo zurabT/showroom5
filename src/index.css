@@ -78,6 +78,7 @@ body {
   border-radius: 50px;
   margin-top: -2rem;
   margin-right: 10rem;
+  cursor: pointer;
 }
 
 @media (max-width: 770px) {
