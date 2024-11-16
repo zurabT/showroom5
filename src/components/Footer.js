@@ -4,8 +4,9 @@ import logo from "../pictures/IMG-LOGO.jpg";
 function Footer() {
   return (
     <div className="footer">
-      <img className="footer-logo" src={logo} width="130" height="130" />
-
+      <Link to="/" className="footer-logo-link">
+        <img className="footer-logo" src={logo} width="130" height="130" />
+      </Link>
       <div className="footer-links">
         <h3>Quick Links</h3>
         <ul className="footer-list">

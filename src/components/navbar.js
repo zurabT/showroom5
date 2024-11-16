@@ -6,7 +6,9 @@ import Gallery from "./Gallery";
 function Navbar() {
   return (
     <div className="navbar">
-      <img className="navbar-logo" src={logo} width="130" height="130" />
+      <Link to="/" className="navbar-logo-link">
+        <img className="navbar-logo" src={logo} width="130" height="130" />
+      </Link>
 
       <ul className="navbar-items">
         <li className="navbar-item">

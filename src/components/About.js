@@ -16,7 +16,7 @@ function About() {
           About Us{" "}
           <FontAwesomeIcon
             className={isActiveAbout ? "about-us-icon" : "about-us-icon-rotate"}
-            icon={faCaretDown}
+            icon={faCaretUp}
             style={{ color: "#a7a8a9" }}
           />
         </h1>
@@ -38,7 +38,7 @@ function About() {
           Who We Are{" "}
           <FontAwesomeIcon
             className={isActiveWho ? "who-icon" : "who-icon-rotate"}
-            icon={faCaretDown}
+            icon={faCaretUp}
             style={{ color: "#a7a8a9" }}
           />
         </h1>
@@ -58,7 +58,7 @@ function About() {
           What We Do{" "}
           <FontAwesomeIcon
             className={isActiveWhat ? "what-icon" : "what-icon-rotate"}
-            icon={faCaretDown}
+            icon={faCaretUp}
             style={{ color: "#a7a8a9" }}
           />
         </h1>
@@ -108,7 +108,7 @@ function About() {
           Why Choose Us?{" "}
           <FontAwesomeIcon
             className={isActiveWhy ? "why-icon" : "why-icon-rotate"}
-            icon={faCaretDown}
+            icon={faCaretUp}
             style={{ color: "#a7a8a9" }}
           />
         </h1>
@@ -149,7 +149,7 @@ function About() {
           Our Mission{" "}
           <FontAwesomeIcon
             className={isActiveOur ? "our-icon" : "our-icon-rotate"}
-            icon={faCaretDown}
+            icon={faCaretUp}
             style={{ color: "#a7a8a9" }}
           />
         </h1>

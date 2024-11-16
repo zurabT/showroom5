@@ -9,6 +9,7 @@ import image7 from "../pictures/gallery/IMG-07.jpg";
 import image8 from "../pictures/gallery/IMG-08.jpg";
 import image9 from "../pictures/gallery/IMG-09.jpg";
 import image10 from "../pictures/gallery/IMG-10.jpg";
+import LoadingSpinner from "./Spinner";
 const images = [
   {
     src: image1,
@@ -68,17 +69,35 @@ function Gallery() {
   const handleClick = () => {
     setIsClicked((prevState) => !prevState);
   };
-
+  const [loadingStates, setLoadingStates] = useState(
+    Array(images.length).fill(true)
+  );
+  const handleImageLoad = (index) => {
+    setLoadingStates((prevLoadingStates) => {
+      const newLoadingStates = [...prevLoadingStates];
+      newLoadingStates[index] = false;
+      return newLoadingStates;
+    });
+  };
   return (
     <div>
       <div className="image-grid">
         {images.map((image, index) => (
           <div className={`gallery-img`} key={index}>
+            {loadingStates[index] && <LoadingSpinner />}
             <img
+              onLoad={() => handleImageLoad(index)}
               key={index}
               className={` ${isClicked ? "clicked" : ""}`}
               src={image.src}
               alt={image.alt}
+              style={{
+                opacity: loadingStates[index] ? 0 : 1,
+                visibility: loadingStates[index] ? "hidden" : "visible",
+                transition: "opacity 0.5s ease-in-out",
+                position: "relative",
+                zIndex: 1,
+              }}
             />
           </div>
         ))}

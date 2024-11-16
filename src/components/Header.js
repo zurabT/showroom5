@@ -4,8 +4,17 @@ import himg from "../pictures/Mask Group.jpg";
 import Services from "./Services";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import LoadingSpinner from "./Spinner";
+import HeaderSpinner from "./HeaderSpinner";
 
-function header() {
+function Header() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoad = () => {
+    setIsLoading(false);
+  };
+
   return (
     <div className="header">
       {/* <Navbar /> */}
@@ -27,9 +36,15 @@ function header() {
             <div className="header-linka">Contact</div>
           </Link>
         </div>
-        <div className="header-img">
+
+        <div onLoad={handleLoad} className="header-img">
           <img src={himg} height="350" />
-          <div className="header-img-border"></div>
+          <div
+            style={{ opacity: isLoading ? 0 : 1 }}
+            className="header-img-border"
+          ></div>
+
+          {isLoading && <HeaderSpinner />}
         </div>
       </div>
       <Services />
@@ -38,4 +53,4 @@ function header() {
   );
 }
 
-export default header;
+export default Header;
