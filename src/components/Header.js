@@ -4,13 +4,26 @@ import himg from "../pictures/Mask Group.jpg";
 import Services from "./Services";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LoadingSpinner from "./Spinner";
 import HeaderSpinner from "./HeaderSpinner";
 
-function Header() {
+function Header({ active, setActive }) {
   const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const savedActive = localStorage.getItem("activeLink");
+    if (savedActive) {
+      setActive(savedActive);
+    }
+  }, []);
 
+  // Save active link to localStorage whenever it changes
+
+  // const [active, setActive] = useState(null);
+  const handleActiveLink = (link) => {
+    setActive(link);
+    localStorage.setItem("activeLink", link);
+  };
   const handleLoad = () => {
     setIsLoading(false);
   };
@@ -32,6 +45,7 @@ function Header() {
             to="/contact"
             style={{ textDecoration: "none", color: "white" }}
             className="header-link"
+            onClick={() => handleActiveLink("contact")}
           >
             <div className="header-linka">Contact</div>
           </Link>
@@ -48,7 +62,7 @@ function Header() {
         </div>
       </div>
       <Services />
-      <Slider />
+      <Slider active={active} setActive={setActive} />
     </div>
   );
 }

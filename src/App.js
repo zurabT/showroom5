@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 
 function App() {
   const [scrollY, setScrollY] = useState(window.scrollY);
-
+  const [active, setActive] = useState(null);
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -40,17 +40,20 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="App">
-        <Navbar />
+        <Navbar active={active} setActive={setActive} />
 
         <Routes>
-          <Route path="/" element={<Header />} />
+          <Route
+            path="/"
+            element={<Header active={active} setActive={setActive} />}
+          />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
 
           {/* <Route path="*" element={<Navigate to="/gallery" />} /> */}
         </Routes>
-        <Footer />
+        <Footer active={active} setActive={setActive} />
         <button
           onClick={handleScrollToTop}
           className={scrollY > 200 ? "up-btn active" : "up-btn"}

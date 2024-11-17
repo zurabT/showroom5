@@ -64,6 +64,18 @@ body {
   background-color: #b0855b;
   color: white;
 }
+.navbar-link-active {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: 400;
+  background-color: #b0855b;
+  color: white;
+}
+
 .navbar-link {
   text-decoration: none;
   font-size: 20px;

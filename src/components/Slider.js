@@ -9,8 +9,22 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 
-function Slideshow() {
+function Slideshow({ active, setActive }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+  useEffect(() => {
+    const savedActive = localStorage.getItem("activeLink");
+    if (savedActive) {
+      setActive(savedActive);
+    }
+  }, []);
+
+  // Save active link to localStorage whenever it changes
+
+  // const [active, setActive] = useState(null);
+  const handleActiveLink = (link) => {
+    setActive(link);
+    localStorage.setItem("activeLink", link);
+  };
 
   useEffect(() => {
     // Function to handle window resize
@@ -53,7 +67,9 @@ function Slideshow() {
     <div className="slider-container">
       <div className="slider-container-link">
         {/* <a href="#">Go to gallery</a> */}
-        <Link to="/gallery">Our projects</Link>
+        <Link to="/gallery" onClick={() => handleActiveLink("gallery")}>
+          Our projects
+        </Link>
       </div>
 
       <Slider {...settings}>

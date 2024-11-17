@@ -1,11 +1,30 @@
 import { Link } from "react-router-dom";
 import logo from "../pictures/IMG-LOGO.jpg";
+import { useEffect, useState } from "react";
 
-function Footer() {
+function Footer({ active, setActive }) {
+  useEffect(() => {
+    const savedActive = localStorage.getItem("activeLink");
+    if (savedActive) {
+      setActive(savedActive);
+    }
+  }, []);
+
+  const handleActiveLink = (link) => {
+    setActive(link);
+    localStorage.setItem("activeLink", link);
+  };
+
   return (
     <div className="footer">
       <Link to="/" className="footer-logo-link">
-        <img className="footer-logo" src={logo} width="130" height="130" />
+        <img
+          className="footer-logo"
+          src={logo}
+          width="130"
+          height="130"
+          onClick={() => handleActiveLink("home")}
+        />
       </Link>
       <div className="footer-links">
         <h3>Quick Links</h3>
@@ -14,7 +33,11 @@ function Footer() {
             {/* <a href="#" className="footer-link">
               Home
             </a> */}
-            <Link to="/" className="footer-link">
+            <Link
+              to="/"
+              className="footer-link"
+              onClick={() => handleActiveLink("home")}
+            >
               {" "}
               Home
             </Link>
@@ -23,7 +46,11 @@ function Footer() {
             {/* <a href="#" className="footer-link">
               Gallery
             </a> */}
-            <Link to="/gallery" className="footer-link">
+            <Link
+              to="/gallery"
+              className="footer-link"
+              onClick={() => handleActiveLink("gallery")}
+            >
               {" "}
               Gallery
             </Link>
@@ -32,7 +59,11 @@ function Footer() {
             {/* <a href="#" className="footer-link">
               About
             </a> */}
-            <Link to="/about" className="footer-link">
+            <Link
+              to="/about"
+              className="footer-link"
+              onClick={() => handleActiveLink("about")}
+            >
               {" "}
               About
             </Link>
@@ -41,7 +72,11 @@ function Footer() {
             {/* <a href="#" className="footer-link">
               Contact
             </a> */}
-            <Link to="/contact" className="footer-link">
+            <Link
+              to="/contact"
+              className="footer-link"
+              onClick={() => handleActiveLink("contact")}
+            >
               {" "}
               Contact
             </Link>
